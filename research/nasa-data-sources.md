@@ -137,20 +137,56 @@ All scientific data acquired by NASA planetary missions is rigorously processed,
 
 ---
 
-## 3. NASA Web GIS Portals & Web Map Services (WMS/WMTS)
+## 3. Official Challenge Data Portals & Foundational NASA Resources
 
-### 3.1 JPL Mars Trek (NASA Solar System Treks)
-* **Overview:** A web-based application developed by NASA JPL that provides 2D and 3D visualization of Mars data from multiple instruments and missions.
-* **Capabilities:** Layer compositing, elevation profile generation, slope calculation, sun angle visualization, 3D printing STL export, and VR headset support.
+The NASA Space Apps Challenge explicitly highlights five foundational data portals and visual references. Each serves a distinct engineering and cartographic role in our solution:
+
+### 3.1 Jet Propulsion Laboratory’s (JPL) Mars Trek
 * **Official URL:** [https://trek.nasa.gov/mars/](https://trek.nasa.gov/mars/)
-* **API & Tile Services:** Mars Trek exposes standardized OGC (Open Geospatial Consortium) Web Map Tile Services (WMTS) and RESTful API endpoints for loading base maps and product overlays into web mapping engines (Leaflet, CesiumJS, MapLibre).
+* **Official Description:** NASA web-based portal for exploration of Mars, showcases data collected by NASA at various landing sites.
+* **Technical Architecture:** 
+  * Developed by NASA JPL’s Solar System Treks Project.
+  * Provides an interactive 2D/3D browser GIS platform with layer opacity controls, distance measurement, elevation profiling, lighting angle simulators, and 3D terrain print generation.
+  * Exposes Open Geospatial Consortium (OGC) compliant Web Map Tile Services (WMTS) and RESTful APIs referencing standard IAU 2000 Mars cartographic coordinate systems.
+* **How It Helps Our Project:**
+  * Acts as our primary tile service benchmark for integrating pre-rendered global and landing site mosaics.
+  * Supplies ground-truth landing site dossiers (Gale Crater, Jezero Crater, Meridiani Planum) to calibrate our map layers.
 
-### 3.2 USGS Astrogeology Planetary GIS & Geologic Maps
-* **Overview:** The USGS Astrogeology Science Center produces standardized, peer-reviewed planetary geologic maps and Cloud-Optimized GeoTIFFs (COGs).
+### 3.2 USGS-NASA Planetary Geologic Mapping Program
 * **Official URL:** [https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars](https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars)
-* **Standard Map Projections:**
-  * Global/Equatorial: Equirectangular (Plate Carrée), Sinusoidal, or Mercator referenced to the IAU 2000 Mars Sphere (mean radius: 3,396,190 m).
-  * Polar Regions: Polar Stereographic.
+* **Official Description:** High-quality standardized geologic map of Mars.
+* **Technical Architecture:**
+  * Maintained by the USGS Astrogeology Science Center under NASA planetary cartography agreements.
+  * Distributes standardized, peer-reviewed global and regional planetary geologic maps (scales 1:5,000,000 down to 1:24,000) as vector shapefiles, GeoJSON, and Cloud-Optimized GeoTIFFs (COGs).
+* **How It Helps Our Project:**
+  * Delivers verified stratigraphic boundaries, fault line traces, volcanic units, and crater age distributions (Noachian, Hesperian, Amazonian).
+  * Provides the scientific baseline to designate high-value geological stops along the astronaut's traverse path.
+
+### 3.3 Curiosity Rover Proposed Route Up Mount Sharp (Route Map Visual Benchmark)
+* **Official URL:** [https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/](https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/)
+* **Official Description:** This animation shows a proposed route for NASA's Curiosity rover, which is climbing lower Mount Sharp on Mars. The annotated version of the map labels different regions that scientists working with the rover would like to explore in coming years. A flyover video explains them in more detail.
+* **Technical Architecture:**
+  * High-resolution perspective visualization synthesizing MRO HiRISE orthomosaics and digital terrain models with annotated waypoints, scientific interest regions, and contour traverses.
+* **How It Helps Our Project:**
+  * Serves as the prime visual reference and architectural benchmark for how NASA mission scientists annotate traverses across complex relief.
+  * Informs the design of our Marswalk navigation planner: connecting waypoints along gentle slope corridors while labeling geological transitions (e.g., Murray Formation, Hematite Ridge, Clay-bearing unit, Sulfate-bearing unit).
+
+### 3.4 NASA Worldview
+* **Official URL:** [https://worldview.earthdata.nasa.gov/](https://worldview.earthdata.nasa.gov/)
+* **Official Description:** Visually explore the past and the present of this dynamic planet from a satellite's perspective. Select from an array of stories below to learn more about Worldview (a part of NASA Earthdata), the satellite imagery we provide and events occurring around the world.
+* **Technical Architecture:**
+  * Built on NASA’s Global Imagery Browse Services (GIBS), providing sub-daily satellite imagery layers, interactive time scrubbing, multi-band spectral blending, and active event overlays.
+* **How It Helps Our Project:**
+  * Provides the gold-standard user experience (UI/UX) model for our Martian map interface: how to design a responsive time-slider for diurnal temperature/solar changes, intuitive layer toggle menus, opacity controls, and split-screen before/after comparisons during dust storm progression.
+
+### 3.5 Mars Perseverance Raw Images Gallery
+* **Official URL:** [https://mars.nasa.gov/mars2020/multimedia/raw-images/](https://mars.nasa.gov/mars2020/multimedia/raw-images/)
+* **Official Description:** Over 1 million images captured by the rover on its journey across the Mars surface.
+* **Technical Architecture:**
+  * Continuously updated repository of raw and calibrated surface telemetry from the Mars 2020 Perseverance rover, including Navcam, Hazcam, Mastcam-Z, SuperCam, and WATSON.
+  * Fully searchable and indexed by Martian Sol, instrument type, camera geometry, and timestamp, with JSON metadata APIs.
+* **How It Helps Our Project:**
+  * Enables a "Point-of-View (POV) Surface Vision" feature in our map: clicking a waypoint or rover stop loads actual ground-level panoramic photographs so astronauts can visually cross-check the orbital map against true ground terrain before walking it.
 
 ---
 
@@ -160,25 +196,28 @@ To satisfy the challenge requirement of integrating **at least three distinct ty
 
 | Layer Category | Source Mission & Sensor | Data Products Used | Operational Value for Astronaut |
 | :--- | :--- | :--- | :--- |
-| **Layer 1: Visual Base Map** | MRO CTX & Mars 2020 Navcam | 6m orthomosaic & ground panoramas | High-contrast visual reference of natural features and surface morphology. |
+| **Layer 1: Visual Base Map** | MRO CTX, HiRISE & Mars 2020 Raw Gallery | 6m orthomosaic & ground panoramas | High-contrast visual reference of natural features and surface morphology. |
 | **Layer 2: Topography & Slope** | MGS MOLA + MRO HiRISE DTM | 463m global DEM + 1m local DTM | Detects hazardous slopes (>15°), cliffs, boulder fields, and calculates terrain elevation profiles. |
 | **Layer 3: Thermophysical Stability** | 2001 Mars Odyssey THEMIS | Nighttime IR & Thermal Inertia | Distinguishes firm bedrock from soft sinking dust; forecasts surface temperatures. |
-| **Layer 4: Environmental / Radiation** | MSL RAD + Mars 2020 MEDA | Cumulative mSv/day dose & dust $\tau$ | Informs space weather danger zones, shelter proximity, and life-support limits. |
+| **Layer 4: Environmental / Radiation** | MSL RAD + Mars 2020 MEDA / REMS | Cumulative mSv/day dose & dust $\tau$ | Informs space weather danger zones, shelter proximity, and life-support limits. |
 | **Layer 5: Science Waypoints** | MRO CRISM + USGS Geologic Maps | Mineral indices (clays, sulfates, ice) | Marks high-priority scientific sampling stations along the Marswalk traverse. |
 
 ---
 
-## 5. Summary Matrix of NASA Data Sources
+## 5. Summary Matrix of NASA Data Sources & Official Portals
 
-| Instrument | Spacecraft / Mission | Primary Data Type | Spatial Resolution | Official Archive URL |
-| :--- | :--- | :--- | :--- | :--- |
-| **MOLA** | Mars Global Surveyor | Laser Altimetry / DEM | 463 m/px (128 ppd) | [PDS MOLA](https://pds-geosciences.wustl.edu/missions/mgs/mola.html) |
-| **HiRISE** | Mars Reconnaissance Orbiter | High-Res Optical & DTM | 0.25–0.3 m/px (1 m DTM) | [HiRISE Ops](https://hirise.lpl.arizona.edu/) |
-| **THEMIS** | 2001 Mars Odyssey | Thermal IR & Inertia | 100 m/px | [ASU THEMIS](https://themis.asu.edu/) |
-| **CTX** | Mars Reconnaissance Orbiter | Panchromatic Context | ~6.0 m/px | [MSSS CTX](https://www.msss.com/msss_images/subject/context_images.html) |
-| **CRISM** | Mars Reconnaissance Orbiter | Hyperspectral Mineralogy| 18–36 m/px | [CRISM JHU/APL](https://crism.jhuapl.edu/) |
-| **REMS & RAD**| MSL Curiosity Rover | Weather, In-Situ Radiation| In-situ point sensor | [PDS Atmospheres MSL](https://pds-atmospheres.nmsu.edu/) |
-| **MEDA** | Mars 2020 Perseverance | Weather, Dust Optical Depth| In-situ point sensor | [PDS Atmospheres M2020](https://pds-atmospheres.nmsu.edu/) |
-| **Mars Trek**| JPL / NASA | Web GIS Tile Services | Multi-resolution | [JPL Mars Trek](https://trek.nasa.gov/mars/) |
-| **USGS Mars GIS**| USGS Astrogeology | Standard Geologic Maps | 1:5,000,000 to 1:24,000 | [USGS Astrogeology](https://astrogeology.usgs.gov/) |
+| Resource / Instrument | Spacecraft / Organization | Primary Data Type | Spatial Resolution | Official Access URL | Key Utility in Martian Map |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **JPL Mars Trek** | NASA JPL | Web GIS Tile Services (WMTS) | Multi-resolution | [JPL Mars Trek](https://trek.nasa.gov/mars/) | Standardized base map tiles and landing site dossiers. |
+| **USGS Mars GIS** | USGS Astrogeology | Standard Geologic Maps | 1:5,000,000 to 1:24,000 | [USGS Astrogeology](https://astrogeology.usgs.gov/) | Bedrock formation units, stratigraphic layers, and geological eras. |
+| **Mount Sharp Visual** | NASA Science / MSL | Route Map Visual & Video | Perspective / Animated | [Curiosity Route Map](https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/) | Traversal waypoint annotation and mission corridor design reference. |
+| **NASA Worldview** | NASA Earthdata | Multi-layer Satellite Viewer | Variable / Time-series | [NASA Worldview](https://worldview.earthdata.nasa.gov/) | UI/UX design benchmark for temporal scrubbing and layer compositing. |
+| **Perseverance Raw Gallery** | Mars 2020 / JPL | Surface Rover Camera Imagery | Millimeter to meter POV | [Perseverance Raw Images](https://mars.nasa.gov/mars2020/multimedia/raw-images/) | Ground-level POV images for helmet visor / tablet waypoint preview. |
+| **MOLA** | Mars Global Surveyor | Laser Altimetry / DEM | 463 m/px (128 ppd) | [PDS MOLA](https://pds-geosciences.wustl.edu/missions/mgs/mola.html) | Global macro-elevation grid and regional watershed/slope modeling. |
+| **HiRISE** | Mars Reconnaissance Orbiter | High-Res Optical & DTM | 0.25–0.3 m/px (1 m DTM) | [HiRISE Ops](https://hirise.lpl.arizona.edu/) | Tactical boulder identification, micro-slopes, and crevasse avoidance. |
+| **THEMIS** | 2001 Mars Odyssey | Thermal IR & Thermal Inertia | 100 m/px | [ASU THEMIS](https://themis.asu.edu/) | Bedrock vs. soft dust discrimination; ground bearing trafficability. |
+| **CTX** | Mars Reconnaissance Orbiter | Panchromatic Context Mosaic | ~6.0 m/px | [MSSS CTX](https://www.msss.com/msss_images/subject/context_images.html) | Seamless context basemap connecting macro-DEM to micro-HiRISE. |
+| **CRISM** | Mars Reconnaissance Orbiter | Hyperspectral Mineralogy | 18–36 m/px | [CRISM JHU/APL](https://crism.jhuapl.edu/) | Hydrated mineralogy (clays/sulfates) for scientific sampling targets. |
+| **REMS & RAD** | MSL Curiosity Rover | Weather, In-Situ Radiation | In-situ point sensor | [PDS Atmospheres MSL](https://pds-atmospheres.nmsu.edu/) | Baseline surface GCR/SPE radiation measurements and microclimate. |
+| **MEDA & RIMFAX** | Mars 2020 Perseverance | Weather & Subsurface Radar | In-situ point & radar depth | [PDS Atmospheres M2020](https://pds-atmospheres.nmsu.edu/) | Ground truth for atmospheric dust optical depth ($\tau$) and shallow stratigraphy. |
 

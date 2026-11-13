@@ -88,21 +88,30 @@ For the NASA Space Apps Challenge submission, the expected deliverables include:
 
 ## Official Challenge Resources Cited by NASA
 
-The official challenge page references the following verified NASA and USGS resources:
+The official NASA Space Apps Challenge page explicitly cites and provides the following verified NASA and USGS resources:
 
 1. **Jet Propulsion Laboratory’s (JPL) Mars Trek:**  
-   [https://trek.nasa.gov/mars/](https://trek.nasa.gov/mars/)  
-   *NASA’s flagship web-based GIS portal for Mars surface exploration, providing access to dozens of mission layers and landing site dossiers.*
+   * **URL:** [https://trek.nasa.gov/mars/](https://trek.nasa.gov/mars/)  
+   * **Official Description:** NASA web-based portal for exploration of Mars, showcases data collected by NASA at various landing sites.
+   * **Project Utility:** Provides access to dozens of mission layers, interactive 2D/3D surface viewers, landing site dossiers, and standardized WMTS tile services.
+
 2. **USGS-NASA Planetary Geologic Mapping Program:**  
-   [https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars](https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars)  
-   *Standardized, peer-reviewed planetary geologic maps providing structural and stratigraphic context.*
-3. **Curiosity Rover Proposed Route up Mount Sharp:**  
-   [https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/](https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/)  
-   *NASA visualization demonstrating annotated waypoints, scientific target zones, and traverse corridors across complex topography.*
+   * **URL:** [https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars](https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars)  
+   * **Official Description:** High-quality standardized geologic map of Mars.
+   * **Project Utility:** Supplies peer-reviewed planetary geologic maps, stratigraphic units, bedrock age classifications, and Cloud-Optimized GeoTIFFs (COGs).
+
+3. **Curiosity Rover Proposed Route Up Mount Sharp (Example of a Route Map Visual):**  
+   * **URL:** [https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/](https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/)  
+   * **Official Description:** This animation shows a proposed route for NASA's Curiosity rover, which is climbing lower Mount Sharp on Mars. The annotated version of the map labels different regions that scientists working with the rover would like to explore in coming years. A flyover video explains them in more detail.
+   * **Project Utility:** Serves as the prime official benchmark for annotating mission corridors, designating scientific regions of interest, and visualizing traversals across challenging topography.
+
 4. **NASA Worldview:**  
-   [https://worldview.earthdata.nasa.gov/](https://worldview.earthdata.nasa.gov/)  
-   *NASA Earthdata satellite visualization architecture showcasing intuitive time-series and multi-layer satellite compositing.*
+   * **URL:** [https://worldview.earthdata.nasa.gov/](https://worldview.earthdata.nasa.gov/)  
+   * **Official Description:** Visually explore the past and the present of this dynamic planet from a satellite's perspective. Select from an array of stories below to learn more about Worldview (a part of NASA Earthdata), the satellite imagery we provide and events occurring around the world.
+   * **Project Utility:** Demonstrates best-in-class multi-layer satellite compositing, dynamic timeline scrubbing, and interactive layer management architecture to emulate in our map interface.
+
 5. **Mars Perseverance Raw Images Gallery:**  
-   [https://mars.nasa.gov/mars2020/multimedia/raw-images/](https://mars.nasa.gov/mars2020/multimedia/raw-images/)  
-   *Over one million raw and calibrated surface images from Mars 2020 navigation, hazard, and science cameras.*
+   * **URL:** [https://mars.nasa.gov/mars2020/multimedia/raw-images/](https://mars.nasa.gov/mars2020/multimedia/raw-images/)  
+   * **Official Description:** Over 1 million images captured by the rover on its journey across the Mars surface.
+   * **Project Utility:** Provides ground-level first-person view (POV) Navcam, Mastcam-Z, and Hazcam imagery to simulate what astronauts see along their traversal path.
 

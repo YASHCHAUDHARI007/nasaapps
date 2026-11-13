@@ -76,6 +76,24 @@ The project synthesizes multi-mission datasets into an integrated 5-layer operat
 
 ### 3. Key NASA Missions & Datasets Summary
 
+#### Core Challenge Portals & Benchmarks
+1. **Jet Propulsion Laboratory’s (JPL) Mars Trek:** [https://trek.nasa.gov/mars/](https://trek.nasa.gov/mars/)  
+   *NASA web-based portal for exploration of Mars, showcases data collected by NASA at various landing sites.*  
+   *Utility:* Provides standardized OGC WMTS endpoints, 2D/3D viewers, and landing site dossiers.
+2. **USGS-NASA Planetary Geologic Mapping Program:** [https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars](https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars)  
+   *High-quality standardized geologic map of Mars.*  
+   *Utility:* Peer-reviewed stratigraphic layers, structural fault lines, and geological epoch boundaries.
+3. **Curiosity Rover Proposed Route Up Mount Sharp (Route Map Visual):** [https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/](https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/)  
+   *This animation shows a proposed route for NASA's Curiosity rover, which is climbing lower Mount Sharp on Mars. The annotated version of the map labels different regions that scientists working with the rover would like to explore in coming years. A flyover video explains them in more detail.*  
+   *Utility:* Prime visual benchmark for annotating mission corridors, scientific waypoints, and topography traversal.
+4. **NASA Worldview:** [https://worldview.earthdata.nasa.gov/](https://worldview.earthdata.nasa.gov/)  
+   *Visually explore the past and the present of this dynamic planet from a satellite's perspective. Select from an array of stories below to learn more about Worldview (a part of NASA Earthdata), the satellite imagery we provide and events occurring around the world.*  
+   *Utility:* Architectural and UX model for timeline scrubbing, satellite multi-layer compositing, and dynamic opacity.
+5. **Mars Perseverance Raw Images Gallery:** [https://mars.nasa.gov/mars2020/multimedia/raw-images/](https://mars.nasa.gov/mars2020/multimedia/raw-images/)  
+   *Over 1 million images captured by the rover on its journey across the Mars surface.*  
+   *Utility:* Ground-level first-person view (POV) Navcam/Mastcam imagery to preview terrain at each waypoint.
+
+#### Multi-Mission Sensor Matrix
 | Instrument | Spacecraft / Mission | Primary Data Type | Spatial Resolution | Official Access URL | Project Role |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **MOLA** | Mars Global Surveyor | Laser Altimetry / DEM | 463 m/px (128 ppd) | [PDS MOLA](https://pds-geosciences.wustl.edu/missions/mgs/mola.html) | Macro-elevation grid & regional slope relief |
@@ -85,6 +103,7 @@ The project synthesizes multi-mission datasets into an integrated 5-layer operat
 | **CRISM** | Mars Reconnaissance Orbiter | Hyperspectral Mineralogy | 18–36 m/px | [JHU/APL CRISM](https://crism.jhuapl.edu/) | Scientific waypoint designation & hydrated mineral targets |
 | **RAD** | MSL Curiosity Rover | Surface Radiation Dosimetry | In-situ point sensor | [PDS Atmospheres MSL](https://pds-atmospheres.nmsu.edu/) | Baseline GCR and SPE solar flare hazard metrics |
 | **MEDA / REMS** | Mars 2020 & Curiosity | Weather & Dust Optical Depth | In-situ point sensor | [PDS Atmospheres M2020](https://pds-atmospheres.nmsu.edu/) | Real-time atmospheric pressure, wind & dust opacity ($\tau$) |
+| **RIMFAX** | Mars 2020 Perseverance | Ground-Penetrating Radar | Deep subsurface (0–10m) | [PDS Geosciences RIMFAX](https://pds-geosciences.wustl.edu/missions/mars2020/rimfax.htm) | Shallow subsurface stratigraphy and ice-layer identification |
 | **Mars Trek** | NASA JPL | Web GIS Tile Services (WMTS) | Multi-resolution | [JPL Mars Trek](https://trek.nasa.gov/mars/) | Standardized tile endpoints for map visualization |
 | **Geologic GIS** | USGS Astrogeology | Standard Stratigraphic Maps | 1:5,000,000 to 1:24,000 | [USGS Astrogeology](https://astrogeology.usgs.gov/) | Structural and geological epoch classification |
 
@@ -108,3 +127,4 @@ To demonstrate a valid Marswalk traversal (e.g., Mount Sharp in Gale Crater or J
 * **NASA Mars Exploration Program:** [https://science.nasa.gov/mars/](https://science.nasa.gov/mars/)
 * **Curiosity Path Up Mount Sharp:** [https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/](https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/)
 * **Perseverance Raw Image Gallery:** [https://mars.nasa.gov/mars2020/multimedia/raw-images/](https://mars.nasa.gov/mars2020/multimedia/raw-images/)
+

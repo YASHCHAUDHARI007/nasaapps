@@ -60,10 +60,42 @@ To build an interplanetary map, data from distinct robotic missions is layered i
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
+### Official NASA Challenge Data Portals & Resources
+
+The challenge prompt explicitly highlights five core NASA and USGS resources:
+
+1. **Jet Propulsion Laboratory’s (JPL) Mars Trek:**  
+   * **URL:** [https://trek.nasa.gov/mars/](https://trek.nasa.gov/mars/)  
+   * **NASA Description:** NASA web-based portal for exploration of Mars, showcases data collected by NASA at various landing sites.  
+   * **Project Integration:** Serves as the primary reference for interactive 2D/3D map tiles, landing site dossiers, and standardized OGC WMTS endpoints.
+2. **USGS-NASA Planetary Geologic Mapping Program:**  
+   * **URL:** [https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars](https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars)  
+   * **NASA Description:** High-quality standardized geologic map of Mars.  
+   * **Project Integration:** Provides peer-reviewed geologic stratigraphy, age classifications (Noachian/Hesperian/Amazonian), and structural fault vectors.
+3. **Curiosity Rover Proposed Route Up Mount Sharp (Visual Benchmark):**  
+   * **URL:** [https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/](https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/)  
+   * **NASA Description:** This animation shows a proposed route for NASA's Curiosity rover, which is climbing lower Mount Sharp on Mars. The annotated version of the map labels different regions that scientists working with the rover would like to explore in coming years. A flyover video explains them in more detail.  
+   * **Project Integration:** Directly guides our traversal visualization model—labeling scientific stop regions, hazard bypasses, and ascent corridors.
+4. **NASA Worldview:**  
+   * **URL:** [https://worldview.earthdata.nasa.gov/](https://worldview.earthdata.nasa.gov/)  
+   * **NASA Description:** Visually explore the past and the present of this dynamic planet from a satellite's perspective. Select from an array of stories below to learn more about Worldview (a part of NASA Earthdata), the satellite imagery we provide and events occurring around the world.  
+   * **Project Integration:** Inspires our UI/UX layout for multi-layer satellite toggling, opacity mixing, and diurnal/seasonal timeline scrubbing.
+5. **Mars Perseverance Raw Images Gallery:**  
+   * **URL:** [https://mars.nasa.gov/mars2020/multimedia/raw-images/](https://mars.nasa.gov/mars2020/multimedia/raw-images/)  
+   * **NASA Description:** Over 1 million images captured by the rover on its journey across the Mars surface.  
+   * **Project Integration:** Powers our ground-level Point-of-View (POV) feature, enabling astronauts to preview rover-ground images at waypoints.
+
+---
+
 ### Detailed Mission & Dataset Matrix
 
 | Dataset / Sensor | Spacecraft | Spectral / Data Type | Resolution | Data Access URL | Key Role in Project |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| **JPL Mars Trek** | NASA JPL | Web GIS Tile Services (WMTS)| Multi-scale | [JPL Mars Trek](https://trek.nasa.gov/mars/) | Standard OGC tile endpoints to feed Leaflet/Cesium map viewports. |
+| **USGS Mars GIS** | USGS Astrogeology | Geologic Map Vector Layers | 1:5M to 1:24k | [USGS Interactive Maps](https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars) | Standardized planetary geologic units and age classifications. |
+| **Mount Sharp Route** | NASA Science / MSL | Annotated Traversal Visual | Perspective | [Curiosity Route Visual](https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/) | Benchmark for waypoint annotation and safe corridor plotting. |
+| **NASA Worldview** | NASA Earthdata | Multi-layer Satellite Engine | Dynamic | [NASA Worldview](https://worldview.earthdata.nasa.gov/) | Architectural reference for temporal scrubbing and layer toggling. |
+| **Perseverance Gallery** | Mars 2020 Rover | In-Situ Ground Camera Imagery | POV Images | [Perseverance Raw Images](https://mars.nasa.gov/mars2020/multimedia/raw-images/) | Ground-level photographic verification along traverse path. |
 | **MOLA** | Mars Global Surveyor | Laser Altimeter DEM | 463 m/px | [PDS MOLA Record](https://pds-geosciences.wustl.edu/missions/mgs/mola.html) | Global elevation basemap, large-scale slope profiles. |
 | **HiRISE** | Mars Reconnaissance Orbiter | Optical & Stereo DTM | 0.25 m/px optical, 1 m DTM | [HiRISE Ops Center](https://hirise.lpl.arizona.edu/) | Tactical boulder identification, crevasse avoidance, micro-slope mapping. |
 | **CTX** | Mars Reconnaissance Orbiter | Panchromatic Optical | 6.0 m/px | [Caltech Murray CTX Mosaic](https://murray-lab.caltech.edu/CTX/) | Comprehensive regional visual basemap covering >99% of Mars. |
@@ -72,8 +104,6 @@ To build an interplanetary map, data from distinct robotic missions is layered i
 | **REMS / MEDA** | Curiosity & Perseverance | Surface Weather Sensors | In-situ point telemetry | [PDS Atmospheres](https://pds-atmospheres.nmsu.edu/) | Ground truth for atmospheric density, diurnal temperatures, dust tau. |
 | **RAD** | Curiosity Rover | Energetic Particle Detector | In-situ point telemetry | [PDS Atmospheres MSL RAD](https://pds-atmospheres.nmsu.edu/) | Measures surface GCR and SPE solar flare radiation dosages. |
 | **RIMFAX** | Perseverance Rover | Ground-Penetrating Radar | Deep subsurface (0–10m) | [PDS Geosciences RIMFAX](https://pds-geosciences.wustl.edu/missions/mars2020/rimfax.htm) | Detects shallow subsurface rock layers, voids, and potential ice. |
-| **Mars Trek** | NASA JPL | Web GIS Tile Services (WMTS)| Multi-scale | [JPL Mars Trek](https://trek.nasa.gov/mars/) | Standard OGC tile endpoints to feed Leaflet/Cesium map viewports. |
-| **USGS Mars GIS** | USGS Astrogeology | Geologic Map Vector Layers | 1:5M to 1:24k | [USGS Interactive Maps](https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars) | Standardized planetary geologic units and age classifications. |
 
 ---
 
@@ -102,3 +132,4 @@ To validate the multi-layer map, a representative 6-hour Marswalk traverse can b
 4. **USGS Astrogeology Science Center:** Planetary Geologic Mapping and Digital Elevation Models. [https://astrogeology.usgs.gov](https://astrogeology.usgs.gov)
 5. **Hassler, D. M., et al. (2014):** *Mars' Surface Radiation Environment Measured with the Mars Science Laboratory's Curiosity Rover.* Science 343, 1244797.
 6. **Hecht, M. H., et al. (2009):** *Detection of Perchlorate by the Mars Phoenix Lander and Implications for Habitability.* Science 325, 64–67.
+
