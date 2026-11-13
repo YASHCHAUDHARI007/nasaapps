@@ -31,6 +31,7 @@ All detailed research deliverables have been compiled inside the [`research/`](r
 | **Problem Statement & Requirements** | [`research/problem-statement.md`](research/problem-statement.md) | Official problem statement, objectives, constraints, form factors (HUD/console/tablet), and Space Apps deliverables. |
 | **Mars Science & Survival Guide** | [`research/mars-research.md`](research/mars-research.md) | In-depth analysis of Mars geography, atmosphere, Armstrong limit, diurnal temperatures, radiation (GCR & SPE), perchlorate toxicity, and EVA constraints. |
 | **NASA Data Sources & Integration Guide** | [`research/nasa-data-sources.md`](research/nasa-data-sources.md) | Comprehensive catalog of NASA datasets (MOLA, HiRISE, THEMIS, CTX, CRISM, REMS, MEDA, RAD, RIMFAX, Mars Trek WMS), resolutions, APIs, and multi-layer schema. |
+| **Deep-Dive Martian Systems Guide** | [`research/martian-systems-deep-dive.md`](research/martian-systems-deep-dive.md) | Advanced planetary engineering deep-dive: gas partial pressures, boundary layer katabatic winds, InSight seismic data, subsurface glacial radar, MOXIE ISRU, cost-surface path algorithms, ECLSS life support, and 0.38g neurovestibular adaptation. |
 | **Executive Research Summary** | [`research/research-summary.md`](research/research-summary.md) | Consolidated reference summary combining all findings for rapid mission planning and architectural design. |
 
 ---
@@ -116,6 +117,24 @@ To demonstrate a valid Marswalk traversal (e.g., Mount Sharp in Gale Crater or J
 2. **Safe Corridor Routing:** Enforce slope ceiling $\le 15^\circ$, avoid known sand ripple dune fields (wheel entrapment), and maintain line-of-sight or beacon relays with the habitat/pressurized rover.
 3. **Scientific Value Maximization:** Waypoint stops mapped to mineral transitions (e.g., clay-bearing units transitioning to sulfate units) indicating past habitability.
 4. **Emergency Abort Thresholds:** Automated real-time return-to-base countdown based on remaining consumables and distance-to-shelter.
+
+---
+
+### 5. Deep-Dive Planetary Systems & Survival Engineering Matrix
+
+A synthesis of the advanced planetary science and physiological domains analyzed in [`research/martian-systems-deep-dive.md`](research/martian-systems-deep-dive.md):
+
+| Domain | Key Data & Scientific Reality | Mission / Instrument Baseline | Operational Survival Impact |
+| :--- | :--- | :--- | :--- |
+| **Atmospheric Gases & Pressure** | $95.32\%\text{ CO}_2$, $2.59\%\text{ N}_2$, $1.93\%\text{ Ar}$; mean $P \approx 6.1\text{ hPa}$ ($<1\%$ Earth; Armstrong limit $63\text{ hPa}$) | Curiosity REMS, M2020 MEDA, Viking | Pressurized spacesuits ($20\text{--}30\text{ kPa}$) prevent ebullism; $N_2/Ar$ buffer gas must be concentrated for habitat. |
+| **Wind & Katabatic Storms** | Katabatic nocturnal slope winds accelerate to $25\text{--}35\text{ m/s}$; low air density reduces dynamic pressure but saltating dust is abrasive | MEDA Wind Sensors, MRO MCS | Sandblasting wear on suit visors, mechanical seals, and optical lenses during high-wind descents. |
+| **Diurnal Thermal Cycling** | Diurnal ground swing from $+20^\circ\text{C}$ midday to $-80^\circ\text{C}$ pre-dawn; $30^\circ\text{C}$ vertical gradient (boots to helmet) | THEMIS, REMS Ground Temp Sensor | Active Liquid Cooling & Ventilation Garments (LCVG); heater-assisted rover batteries and joint seals. |
+| **Seismology & Geophysics** | 1,318+ marsquakes detected up to $M_w 4.7$; very low attenuation crust reverberates for $60\text{--}90\text{ min}$; core radius $1,830\text{ km}$ | NASA InSight (SEIS Instrument) | Structural foundation stability; mapping underground lava tubes and bedrock structural faults. |
+| **Space Weather & Ionizing Radiation** | GCR baseline $0.64\pm 0.12\text{ mSv/day}$ ($\sim 230\text{ mSv/yr}$); SPE solar proton flares $>1,000\text{ mSv}$; regolith neutron albedo | MSL RAD, MAVEN, NOAA SWPC | Early warning alert integration ($12\text{--}36\text{ hr}$ lead time); abort to regolith/water storm shelters. |
+| **Subsurface Hydrology & Ice** | Glacial ice sheets tens of meters thick under $1\text{--}10\text{ m}$ regolith in Arcadia/Utopia; polyhydrated sulfates ($8\text{--}15\%\text{ H}_2\text{O}$) | MRO SHARAD Radar, Phoenix Lander | High-priority ISRU extraction targets to supply human base drinking water and fuel production. |
+| **ISRU Oxygen & Fuel Production** | MOXIE generates $6\text{--}12\text{ g/hr}$ pure $\text{O}_2$ via Solid Oxide Electrolysis ($800^\circ\text{C}$); Sabatier reaction produces $\text{CH}_4$ | Perseverance MOXIE, Laboratory Sabatier | Eliminates need to transport return oxidizer and propellant from Earth (~30 metric tons saved). |
+| **Gravitational Adaptation** | Mars gravity is $0.38\text{ g}$ ($3.72\text{ m/s}^2$); otolith disorientation for 48–72 hr; bone mineral loss $1\%/\text{month}$; $200\text{ kg}$ suit inertia | NASA Human Research Program (HRP) | Neurovestibular motion sickness management; high physical inertia trips astronauts running in low weight. |
+| **Sol Temporal Tracking & Isolation** | Sol day length is $24\text{h }39\text{m }35\text{s}$; communication latency $3.1\text{ to }22.3\text{ min}$ each way ($6.2\text{--}44.6\text{ min}$ roundtrip) | Mars Sol Date (MSD) standard | High-lux blue lighting (460–480 nm) for circadian sync; 100% autonomous local navigation without Earth reliance. |
 
 ---
 

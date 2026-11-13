@@ -124,7 +124,25 @@ To validate the multi-layer map, a representative 6-hour Marswalk traverse can b
 
 ---
 
-## 5. Verified NASA References & Citations
+## 5. Comprehensive Planetary Systems Deep-Dive Matrix
+
+For detailed scientific derivations, see the full guide: [`research/martian-systems-deep-dive.md`](martian-systems-deep-dive.md).
+
+| System / Topic | Core NASA Finding | Mission / Instrument | Survival & Mission Integration |
+| :--- | :--- | :--- | :--- |
+| **Atmospheric Gas Pressures** | $95.32\%\text{ CO}_2$, $2.59\%\text{ N}_2$, $1.93\%\text{ Ar}$; mean $P \approx 6.1\text{ hPa}$ (Armstrong limit $\approx 63\text{ hPa}$) | Curiosity REMS, M2020 MEDA | Pressurized EVA suits mandatory ($20\text{--}30\text{ kPa}$); habitat requires $N_2/Ar$ concentration. |
+| **Wind & Katabatic Storms** | Nighttime katabatic slope winds reach $25\text{--}35\text{ m/s}$; low density reduces dynamic force but dust causes severe saltation wear | Curiosity REMS, M2020 MEDA | Abrasion-resistant visor coatings; avoiding steep crater rim descents during nocturnal wind peaks. |
+| **Diurnal Thermal Cycling** | Ground temps swing from $+20^\circ\text{C}$ midday to $-80^\circ\text{C}$ pre-dawn; $30^\circ\text{C}$ vertical boot-to-helmet gradient | Odyssey THEMIS, REMS | Active Liquid Cooling & Ventilation Garments (LCVG); heater-assisted electronics. |
+| **Seismology & Interior** | Over 1,318 marsquakes detected up to $M_w 4.7$; low seismic attenuation rings for 60–90 min; core radius $1,830\text{ km}$ | NASA InSight (SEIS instrument) | Habitat foundation stability; mapping underground lava tubes and subterranean cavern integrity. |
+| **Radiation & Space Weather** | GCR baseline $0.64\pm 0.12\text{ mSv/day}$; SPE flares $>1,000\text{ mSv}$; regolith neutron albedo | MSL RAD, MAVEN, NOAA SWPC | Automated space weather alerts ($12\text{--}36\text{ hr}$ lead time); abort to regolith/water storm shelters. |
+| **Hydrology & Subsurface Ice** | Massive glacial sheets (tens of meters thick) under $1\text{--}10\text{ m}$ regolith in Arcadia/Utopia; polyhydrated sulfates ($8\text{--}15\%\text{ H}_2\text{O}$) | MRO SHARAD Radar, Phoenix | Primary ISRU water extraction sites for drinking water and propellant synthesis. |
+| **ISRU Oxygen & Propellant** | MOXIE generates $6\text{--}12\text{ g/hr}$ pure $\text{O}_2$ via SOXE ($800^\circ\text{C}$); Sabatier reaction produces $\text{CH}_4$ fuel | Perseverance MOXIE | In-situ rocket fuel and oxygen generation, saving ~30 metric tons of Earth launch mass. |
+| **0.38g Gravity Adaptation** | $0.38\text{ g}$ gravity causes neurovestibular tilt-translation illusions for 48–72h; bone mineral loss $1\%/\text{mo}$; $200\text{ kg}$ suit inertia | NASA Human Research Program | Countermeasures for neurovestibular ataxia; managing high physical mass inertia on low-friction dust. |
+| **Sol Temporal Tracking & Isolation** | Martian Sol is $24\text{h }39\text{m }35\text{s}$; Earth communication delay $3.1\text{ to }22.3\text{ min}$ each way | Coordinated Mars Time (MTC) | Blue-enriched circadian lighting (460–480 nm); 100% autonomous onboard navigation system. |
+
+---
+
+## 6. Verified NASA References & Citations
 
 1. **NASA Jet Propulsion Laboratory:** Mars Exploration Program & Rover Science Archives. [https://mars.nasa.gov](https://mars.nasa.gov)
 2. **NASA Planetary Data System (PDS):** Geosciences and Atmospheres Nodes. [https://pds.nasa.gov](https://pds.nasa.gov)
@@ -132,4 +150,6 @@ To validate the multi-layer map, a representative 6-hour Marswalk traverse can b
 4. **USGS Astrogeology Science Center:** Planetary Geologic Mapping and Digital Elevation Models. [https://astrogeology.usgs.gov](https://astrogeology.usgs.gov)
 5. **Hassler, D. M., et al. (2014):** *Mars' Surface Radiation Environment Measured with the Mars Science Laboratory's Curiosity Rover.* Science 343, 1244797.
 6. **Hecht, M. H., et al. (2009):** *Detection of Perchlorate by the Mars Phoenix Lander and Implications for Habitability.* Science 325, 64–67.
+7. **Banerdt, W. B., et al. (2020):** *Initial results from the InSight mission on Mars.* Nature Geoscience 13, 183–189.
+8. **Hecht, M. H., et al. (2021):** *Mars Oxygen ISRU Experiment (MOXIE)—Preparing for human Mars exploration.* Space Science Reviews 217, 9.
 

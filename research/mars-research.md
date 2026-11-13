@@ -191,7 +191,14 @@ Mars possesses **no global intrinsic dipolar magnetic field**. While localized c
 
 ---
 
-## 10. References & NASA Research Citations
+## 10. Advanced Planetary Systems & Survival Engineering Deep-Dive
+
+For an exhaustive technical breakdown across geophysics, seismic data (InSight SEIS), gas partial pressures, boundary-layer katabatic wind physics, subsurface glacial radar (SHARAD), MOXIE oxygen generation, Sabatier fuel synthesis, ECLSS life support calculations, and 0.38g neurovestibular adaptation, see:
+* **[Comprehensive Martian Systems Deep-Dive Document](martian-systems-deep-dive.md)**
+
+---
+
+## 11. References & NASA Research Citations
 
 1. **NASA Jet Propulsion Laboratory (JPL):** *Mars Exploration Rovers, MSL Curiosity, and Mars 2020 Perseverance Science Archives.* [https://mars.nasa.gov](https://mars.nasa.gov)
 2. **NASA Planetary Data System (PDS):** *Planetary Atmospheres and Geosciences Nodes.* [https://pds-atmospheres.nmsu.edu/](https://pds-atmospheres.nmsu.edu/)
@@ -199,4 +206,6 @@ Mars possesses **no global intrinsic dipolar magnetic field**. While localized c
 4. **USGS Astrogeology Science Center:** *Mars Digital Elevation Models and Geologic Maps.* [https://astrogeology.usgs.gov/](https://astrogeology.usgs.gov/)
 5. **Hassler, D. M., et al. (2014):** *Mars' Surface Radiation Environment Measured with the Mars Science Laboratory's Curiosity Rover.* Science 343, 1244797. DOI: 10.1126/science.1244797.
 6. **Hecht, M. H., et al. (2009):** *Detection of Perchlorate by the Mars Phoenix Lander and Implications for Habitability.* Science 325, 64–67.
+7. **Banerdt, W. B., et al. (2020):** *Initial results from the InSight mission on Mars.* Nature Geoscience 13, 183–189.
+8. **Hecht, M. H., et al. (2021):** *Mars Oxygen ISRU Experiment (MOXIE)—Preparing for human Mars exploration.* Space Science Reviews 217, 9.
 
