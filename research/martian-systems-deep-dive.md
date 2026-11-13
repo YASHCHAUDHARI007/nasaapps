@@ -375,6 +375,9 @@ Human physiology adapted for terrestrial $1.0\text{ g}$ experiences significant 
 
 ## 9. Authoritative NASA References & Mission Archives
 
+> [!NOTE]
+> For the complete, unabridged catalog of all mission archives, dataset repositories, PDS nodes, and research papers, see the master directory: **[`research/sources-and-citations.md`](sources-and-citations.md)**.
+
 1. **NASA Jet Propulsion Laboratory (JPL) Mars Trek Portal:**  
    [https://trek.nasa.gov/mars/](https://trek.nasa.gov/mars/)
 2. **USGS Astrogeology Planetary Geologic Mapping Program:**  
@@ -385,13 +388,18 @@ Human physiology adapted for terrestrial $1.0\text{ g}$ experiences significant 
    [https://worldview.earthdata.nasa.gov/](https://worldview.earthdata.nasa.gov/)
 5. **Mars 2020 Perseverance Raw Images Gallery:**  
    [https://mars.nasa.gov/mars2020/multimedia/raw-images/](https://mars.nasa.gov/mars2020/multimedia/raw-images/)
-6. **NASA Planetary Data System (PDS) Geosciences Node (MOLA, CRISM, THEMIS, RIMFAX):**  
+6. **NASA Planetary Data System (PDS) Geosciences Node (MOLA, CRISM, THEMIS, RIMFAX, SHARAD, InSight SEIS):**  
    [https://pds-geosciences.wustl.edu/](https://pds-geosciences.wustl.edu/)
-7. **NASA PDS Atmospheres Node (REMS, MEDA, Mars Weather Data):**  
+7. **NASA PDS Atmospheres Node (REMS, MEDA, RAD, Mars Weather Data):**  
    [https://pds-atmospheres.nmsu.edu/](https://pds-atmospheres.nmsu.edu/)
-8. **University of Arizona HiRISE High Resolution Imaging Operations Center:**  
-   [https://hirise.lpl.arizona.edu/](https://hirise.lpl.arizona.edu/)
-9. **Banerdt, W. B., et al. (2020):** *Initial results from the InSight mission on Mars.* Nature Geoscience 13, 183–189.
-10. **Hassler, D. M., et al. (2014):** *Mars' Surface Radiation Environment Measured with the Mars Science Laboratory's Curiosity Rover.* Science 343, 1244797.
-11. **Hecht, M. H., et al. (2021):** *Mars Oxygen ISRU Experiment (MOXIE)—Preparing for human Mars exploration.* Space Science Reviews 217, 9.
-12. **NASA Human Research Program (HRP):** *Evidence Report: Risk of Acute and Late Central Nervous System Effects from Radiation Exposure.* NASA/TP-2016-218603.
+8. **University of Arizona HiRISE High Resolution Imaging Operations Center & DTM Catalog:**  
+   [https://hirise.lpl.arizona.edu/](https://hirise.lpl.arizona.edu/) | [https://www.uahirise.org/dtm/](https://www.uahirise.org/dtm/)
+9. **Banerdt, W. B., et al. (2020):** *Initial results from the InSight mission on Mars.* Nature Geoscience 13, 183–189. [DOI: 10.1038/s41561-020-0544-y](https://doi.org/10.1038/s41561-020-0544-y)
+10. **Hassler, D. M., et al. (2014):** *Mars' Surface Radiation Environment Measured with the Mars Science Laboratory's Curiosity Rover.* Science 343, 1244797. [DOI: 10.1126/science.1244797](https://doi.org/10.1126/science.1244797)
+11. **Hecht, M. H., et al. (2021):** *Mars Oxygen ISRU Experiment (MOXIE)—Preparing for human Mars exploration.* Space Science Reviews 217, 9. [DOI: 10.1007/s11214-020-00782-8](https://doi.org/10.1007/s11214-020-00782-8)
+12. **Hecht, M. H., et al. (2009):** *Detection of Perchlorate by the Mars Phoenix Lander and Implications for Habitability.* Science 325, 64–67. [DOI: 10.1126/science.1172466](https://doi.org/10.1126/science.1172466)
+13. **NASA Human Research Program (HRP):** *Evidence Report: Risk of Acute and Late Central Nervous System Effects from Radiation Exposure.* [NASA Space Radiation Program](https://www.nasa.gov/directorates/esdmd/human-research-program/space-radiation/)
+14. **NASA Technical Reports Server (NTRS) - Sabatier ISRU System Design:** [https://ntrs.nasa.gov/citations/20120016419](https://ntrs.nasa.gov/citations/20120016419)
+15. **NOAA Space Weather Prediction Center (SWPC):** [https://www.swpc.noaa.gov/](https://www.swpc.noaa.gov/)
+16. **NASA GISS Mars24 Sunclock & Time Algorithm (MSD/MTC):** [https://www.giss.nasa.gov/tools/mars24/](https://www.giss.nasa.gov/tools/mars24/)
+

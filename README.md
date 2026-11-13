@@ -32,6 +32,7 @@ All detailed research deliverables have been compiled inside the [`research/`](r
 | **Mars Science & Survival Guide** | [`research/mars-research.md`](research/mars-research.md) | In-depth analysis of Mars geography, atmosphere, Armstrong limit, diurnal temperatures, radiation (GCR & SPE), perchlorate toxicity, and EVA constraints. |
 | **NASA Data Sources & Integration Guide** | [`research/nasa-data-sources.md`](research/nasa-data-sources.md) | Comprehensive catalog of NASA datasets (MOLA, HiRISE, THEMIS, CTX, CRISM, REMS, MEDA, RAD, RIMFAX, Mars Trek WMS), resolutions, APIs, and multi-layer schema. |
 | **Deep-Dive Martian Systems Guide** | [`research/martian-systems-deep-dive.md`](research/martian-systems-deep-dive.md) | Advanced planetary engineering deep-dive: gas partial pressures, boundary layer katabatic winds, InSight seismic data, subsurface glacial radar, MOXIE ISRU, cost-surface path algorithms, ECLSS life support, and 0.38g neurovestibular adaptation. |
+| **Master Sources & Citations Directory** | [`research/sources-and-citations.md`](research/sources-and-citations.md) | Exhaustive directory of all verified NASA, USGS, ESA, and peer-reviewed journal papers, DOIs, and PDS archive endpoints. |
 | **Executive Research Summary** | [`research/research-summary.md`](research/research-summary.md) | Consolidated reference summary combining all findings for rapid mission planning and architectural design. |
 
 ---
@@ -140,10 +141,19 @@ A synthesis of the advanced planetary science and physiological domains analyzed
 
 ## 🔗 Official References & NASA Portals
 
-* **NASA Planetary Data System (PDS):** [https://pds.nasa.gov/](https://pds.nasa.gov/)
-* **JPL Mars Trek:** [https://trek.nasa.gov/mars/](https://trek.nasa.gov/mars/)
-* **USGS Mars Interactive Maps:** [https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars](https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars)
-* **NASA Mars Exploration Program:** [https://science.nasa.gov/mars/](https://science.nasa.gov/mars/)
-* **Curiosity Path Up Mount Sharp:** [https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/](https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/)
-* **Perseverance Raw Image Gallery:** [https://mars.nasa.gov/mars2020/multimedia/raw-images/](https://mars.nasa.gov/mars2020/multimedia/raw-images/)
+> [!TIP]
+> An exhaustive, categorized directory of every dataset URL, PDS node, and peer-reviewed paper citation is documented in **[`research/sources-and-citations.md`](research/sources-and-citations.md)**.
+
+* **NASA Planetary Data System (PDS) Central Portal:** [https://pds.nasa.gov/](https://pds.nasa.gov/)
+* **JPL Mars Trek Interactive GIS Portal:** [https://trek.nasa.gov/mars/](https://trek.nasa.gov/mars/)
+* **USGS Planetary Geologic Mapping of Mars:** [https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars](https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars)
+* **NASA Science Curiosity Proposed Path Up Mount Sharp:** [https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/](https://science.nasa.gov/resource/curiositys-proposed-path-up-mount-sharp/)
+* **NASA Worldview Satellite Engine:** [https://worldview.earthdata.nasa.gov/](https://worldview.earthdata.nasa.gov/)
+* **Mars Perseverance Raw Images Gallery (1M+ Images):** [https://mars.nasa.gov/mars2020/multimedia/raw-images/](https://mars.nasa.gov/mars2020/multimedia/raw-images/)
+* **University of Arizona HiRISE Operations Center & DTM Catalog:** [https://hirise.lpl.arizona.edu/](https://hirise.lpl.arizona.edu/) | [https://www.uahirise.org/dtm/](https://www.uahirise.org/dtm/)
+* **Arizona State University THEMIS Thermal Infrared Portal:** [https://themis.asu.edu/](https://themis.asu.edu/)
+* **Caltech Murray Lab Global CTX Mosaic:** [https://murray-lab.caltech.edu/CTX/](https://murray-lab.caltech.edu/CTX/)
+* **NASA InSight SEIS Mission Archive:** [https://mars.nasa.gov/insight/](https://mars.nasa.gov/insight/) | [PDS SEIS](https://pds-geosciences.wustl.edu/missions/insight/seis.htm)
+* **NASA Human Research Program (HRP):** [https://www.nasa.gov/hrp/](https://www.nasa.gov/hrp/)
+* **NOAA Space Weather Prediction Center (SWPC):** [https://www.swpc.noaa.gov/](https://www.swpc.noaa.gov/)
 
